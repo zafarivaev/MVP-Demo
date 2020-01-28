@@ -3,27 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C248C8B23E0A17C0042CB4F /* ItemsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C248C8A23E0A17C0042CB4F /* ItemsPresenter.swift */; };
+		1C248C8D23E0B67E0042CB4F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C248C8C23E0B67E0042CB4F /* Item.swift */; };
 		1CD1568D23E098BA00EC2C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD1568C23E098BA00EC2C1B /* AppDelegate.swift */; };
-		1CD1568F23E098BA00EC2C1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD1568E23E098BA00EC2C1B /* SceneDelegate.swift */; };
-		1CD1569123E098BA00EC2C1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD1569023E098BA00EC2C1B /* ViewController.swift */; };
-		1CD1569423E098BA00EC2C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD1569223E098BA00EC2C1B /* Main.storyboard */; };
+		1CD1569123E098BA00EC2C1B /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD1569023E098BA00EC2C1B /* ItemsViewController.swift */; };
 		1CD1569623E098BC00EC2C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD1569523E098BC00EC2C1B /* Assets.xcassets */; };
 		1CD1569923E098BC00EC2C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD1569723E098BC00EC2C1B /* LaunchScreen.storyboard */; };
+		BCF350E3DBB21B155B05FFA5 /* Pods_MVP_Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D68CAFCBBDDE65821698BEE /* Pods_MVP_Realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C248C8A23E0A17C0042CB4F /* ItemsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsPresenter.swift; sourceTree = "<group>"; };
+		1C248C8C23E0B67E0042CB4F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1CD1568923E098BA00EC2C1B /* MVP-Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVP-Realm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD1568C23E098BA00EC2C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1CD1568E23E098BA00EC2C1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1CD1569023E098BA00EC2C1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1CD1569323E098BA00EC2C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1CD1569023E098BA00EC2C1B /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		1CD1569523E098BC00EC2C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD1569823E098BC00EC2C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CD1569A23E098BC00EC2C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D68CAFCBBDDE65821698BEE /* Pods_MVP_Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVP_Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B639DD9C6B87CB999DD172D /* Pods-MVP-Realm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP-Realm.release.xcconfig"; path = "Target Support Files/Pods-MVP-Realm/Pods-MVP-Realm.release.xcconfig"; sourceTree = "<group>"; };
+		C25D670E37E41758982DAA1D /* Pods-MVP-Realm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP-Realm.debug.xcconfig"; path = "Target Support Files/Pods-MVP-Realm/Pods-MVP-Realm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF350E3DBB21B155B05FFA5 /* Pods_MVP_Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				1CD1568B23E098BA00EC2C1B /* MVP-Realm */,
 				1CD1568A23E098BA00EC2C1B /* Products */,
+				4795849E8D204DBFD0D7605B /* Pods */,
+				CB3186234B33498B78BB82CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +63,72 @@
 		1CD1568B23E098BA00EC2C1B /* MVP-Realm */ = {
 			isa = PBXGroup;
 			children = (
-				1CD1568C23E098BA00EC2C1B /* AppDelegate.swift */,
-				1CD1568E23E098BA00EC2C1B /* SceneDelegate.swift */,
-				1CD1569023E098BA00EC2C1B /* ViewController.swift */,
-				1CD1569223E098BA00EC2C1B /* Main.storyboard */,
+				1CD156A123E09F9600EC2C1B /* App */,
+				1CD156A423E09F9F00EC2C1B /* Presenter */,
+				1CD156A323E09F9C00EC2C1B /* View */,
+				1CD156A223E09F9800EC2C1B /* Model */,
+				1CD156A023E09F8F00EC2C1B /* Supporting Files */,
+			);
+			path = "MVP-Realm";
+			sourceTree = "<group>";
+		};
+		1CD156A023E09F8F00EC2C1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				1CD1569523E098BC00EC2C1B /* Assets.xcassets */,
 				1CD1569723E098BC00EC2C1B /* LaunchScreen.storyboard */,
 				1CD1569A23E098BC00EC2C1B /* Info.plist */,
 			);
-			path = "MVP-Realm";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1CD156A123E09F9600EC2C1B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1CD1568C23E098BA00EC2C1B /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1CD156A223E09F9800EC2C1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C248C8C23E0B67E0042CB4F /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1CD156A323E09F9C00EC2C1B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CD1569023E098BA00EC2C1B /* ItemsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1CD156A423E09F9F00EC2C1B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1C248C8A23E0A17C0042CB4F /* ItemsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4795849E8D204DBFD0D7605B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C25D670E37E41758982DAA1D /* Pods-MVP-Realm.debug.xcconfig */,
+				9B639DD9C6B87CB999DD172D /* Pods-MVP-Realm.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CB3186234B33498B78BB82CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D68CAFCBBDDE65821698BEE /* Pods_MVP_Realm.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CD1569D23E098BC00EC2C1B /* Build configuration list for PBXNativeTarget "MVP-Realm" */;
 			buildPhases = (
+				51EE83A0270C7A2565F532BC /* [CP] Check Pods Manifest.lock */,
 				1CD1568523E098BA00EC2C1B /* Sources */,
 				1CD1568623E098BA00EC2C1B /* Frameworks */,
 				1CD1568723E098BA00EC2C1B /* Resources */,
+				4BE6441A9C4C87CF1DA96D6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +193,68 @@
 			files = (
 				1CD1569923E098BC00EC2C1B /* LaunchScreen.storyboard in Resources */,
 				1CD1569623E098BC00EC2C1B /* Assets.xcassets in Resources */,
-				1CD1569423E098BA00EC2C1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BE6441A9C4C87CF1DA96D6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVP-Realm/Pods-MVP-Realm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVP-Realm/Pods-MVP-Realm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVP-Realm/Pods-MVP-Realm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51EE83A0270C7A2565F532BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVP-Realm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1CD1568523E098BA00EC2C1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CD1569123E098BA00EC2C1B /* ViewController.swift in Sources */,
+				1C248C8D23E0B67E0042CB4F /* Item.swift in Sources */,
+				1C248C8B23E0A17C0042CB4F /* ItemsPresenter.swift in Sources */,
+				1CD1569123E098BA00EC2C1B /* ItemsViewController.swift in Sources */,
 				1CD1568D23E098BA00EC2C1B /* AppDelegate.swift in Sources */,
-				1CD1568F23E098BA00EC2C1B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1CD1569223E098BA00EC2C1B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1CD1569323E098BA00EC2C1B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1CD1569723E098BC00EC2C1B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,11 +382,12 @@
 		};
 		1CD1569E23E098BC00EC2C1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C25D670E37E41758982DAA1D /* Pods-MVP-Realm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJWVGRX9VD;
-				INFOPLIST_FILE = "MVP-Realm/Info.plist";
+				INFOPLIST_FILE = "MVP-Realm/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +401,12 @@
 		};
 		1CD1569F23E098BC00EC2C1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B639DD9C6B87CB999DD172D /* Pods-MVP-Realm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJWVGRX9VD;
-				INFOPLIST_FILE = "MVP-Realm/Info.plist";
+				INFOPLIST_FILE = "MVP-Realm/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
