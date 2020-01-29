@@ -32,7 +32,7 @@ class ItemsViewController: UIViewController {
     // MARK: - Actions
     @objc func addTapped() {
         let alert = UIAlertController(title: "Add new Item", message: nil, preferredStyle: .alert)
-        let cancel = UIAlertAction()
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
         let add = UIAlertAction(title: "Add", style: .default) { [weak self] _ in
             if let title = alert.textFields?.first!.text, !title.isEmpty {
                 self?.presenter.addTapped(with: title)
@@ -67,6 +67,15 @@ class ItemsViewController: UIViewController {
             .translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
+    
+    lazy var placeholderLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "HelveticaNeue-Bold", size: 20)
+        label.textColor = .darkGray
+        label.text = "No stored items yet"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
 
 }
 
@@ -74,22 +83,23 @@ class ItemsViewController: UIViewController {
 extension ItemsViewController: ItemsView {
     
     func onItemsRetrieval(titles: [String]) {
-        print("View recieves the result from Presenter.")
+        print("View recieves the result from the Presenter.")
         self.titles = titles
         self.tableView.reloadData()
     }
     
     func onItemAddSuccess(title: String) {
-        print("View recieves the result from Presenter.")
+        print("View recieves the result from the Presenter.")
         self.titles.append(title)
         self.tableView.reloadData()
     }
     
     func onItemAddFailure(message: String) {
-        print("View recieved a failure result from Presenter: \(message)")
+        print("View recieves a failure result from the Presenter: \(message)")
     }
     
     func onItemDeletion(index: Int) {
+        print("View recieves a deletion result from the Presenter")
         self.titles.remove(at: index)
         self.tableView.reloadData()
     }
@@ -99,6 +109,9 @@ extension ItemsViewController: ItemsView {
 extension ItemsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        tableView.isHidden = self.titles.isEmpty
+        placeholderLabel.isHidden = !self.titles.isEmpty
+        
         return self.titles.count
     }
     
@@ -126,10 +139,17 @@ extension ItemsViewController {
         self.view.backgroundColor = .white
         
         self.view.addSubview(tableView)
+        self.view.addSubview(placeholderLabel)
         
         NSLayoutConstraint.activate([
-            tableView.widthAnchor.constraint(equalTo: self.view.widthAnchor),
-            tableView.heightAnchor.constraint(equalTo: self.view.heightAnchor)
+            tableView.widthAnchor
+                .constraint(equalTo: self.view.widthAnchor),
+            tableView.heightAnchor
+                .constraint(equalTo: self.view.heightAnchor),
+            placeholderLabel.centerXAnchor
+                .constraint(equalTo: self.view.centerXAnchor),
+            placeholderLabel.centerYAnchor
+                .constraint(equalTo: self.view.centerYAnchor)
         ])
     }
     

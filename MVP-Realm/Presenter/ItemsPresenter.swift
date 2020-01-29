@@ -29,17 +29,17 @@ class ItemsPresenter: ItemsViewPresenter {
     
     // MARK: - Protocol methods
     func viewDidLoad() {
-        print("View notifies Presenter that it has loaded.")
+        print("View notifies the Presenter that it has loaded.")
         retrieveItems()
     }
     
     func addTapped(with title: String) {
-        print("View notifies Presenter that an add button was tapped.")
+        print("View notifies the Presenter that an add button was tapped.")
         addItem(title: title)
     }
     
     func deleteSelected(for index: Int) {
-        print("Presenter deletes a corresponding Item from the Realm Database.")
+        print("View notifies the Presenter that a delete action was performed.")
         deleteItem(at: index)
     }
     
@@ -54,6 +54,7 @@ class ItemsPresenter: ItemsViewPresenter {
     }
     
     private func addItem(title: String) {
+        print("Presenter adds an Item object to the Realm Database.")
         let item = Item(title: title)
         do {
             try self.realm.write {
@@ -66,6 +67,7 @@ class ItemsPresenter: ItemsViewPresenter {
     }
     
     private func deleteItem(at index: Int) {
+        print("Presenter deletes an Item object from the Realm Database.")
         if let items = items {
             do {
                 try self.realm.write {
