@@ -74,7 +74,7 @@ class ItemsPresenter: ItemsViewPresenter {
                     self.realm.delete(items[index])
                 }
             } catch {
-                view?.onItemAddFailure(message: error.localizedDescription)
+                print("Couldn't delete an item")
             }
             view?.onItemDeletion(index: index)
         }
